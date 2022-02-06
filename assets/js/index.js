@@ -78,6 +78,28 @@ Source:
 
   // Not yet supported: https://github.com/nextapps-de/flexsearch#complex-documents
 
+
+var index = new FlexSearch({
+  preset: 'score',
+  cache: true,
+  doc: {
+      id: 'id',
+      field: [
+        'title',
+        'description',
+        'content',
+      ],
+      store: [
+        'href',
+        'title',
+        'description',
+      ],
+  },
+  // Insert language specific settings below — e.g. Latin
+  encode: "simple",
+  tokenize: "forward"
+});
+
   /*
   var docs = [
     {{ range $index, $page := (where .Site.Pages "Section" "docs") -}}
@@ -91,6 +113,7 @@ Source:
     {{ end -}}
   ];
   */
+
 
   // https://discourse.gohugo.io/t/range-length-or-last-element/3803/2
 
