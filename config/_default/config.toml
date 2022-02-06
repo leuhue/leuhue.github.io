@@ -1,4 +1,4 @@
-baseurl = "https://leuhue.github.io/"
+baseurl = "https://github.com/leuhue/leuhue.github.io"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
